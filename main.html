@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body class="flex height-100vh bg-blue overflow-hidden z-index--2">
+<div class="height-100 width-100 position-absolute top-0 bg-dark-transparent z-index--1"></div>
+<div class="flex f-column width-400x margin-auto flex f-column">
+    <header class="flex f-row justify-between height-40x margin-y-10x margin-x-0 fs-1r align-center">
+        <div>
+            <span class="width-60px height-60x vertical-middle x" about="small"></span>
+            <span class="width-60px height-60x vertical-middle o" about="small"></span>
+        </div>
+        <div class="flex f-row align-center color-grey margin-left--9x font-primary padding-y-0 padding-x-15x width-100x bg-blue2 align-center font-w-700 letter-spacing-1x border-radius-8x o" id="turn-viewer"
+             about="smaller">Turn
+        </div>
+        <button class="flex border-none outline-none padding-4x bg-grey border-radius-8x justify-center align-center pointer"
+                id="reset">
+            <img class="height-100 width-100" src="refresh.svg" alt="reset"></button>
+    </header>
+    <main class="flex f-column justify-between height-400x">
+        <div class="flex f-row margin-y-auto margin-x-0 justify-between">
+            <div class="width-100x height-100x bg-blue2 margin-0 box-shadow-3-3-10-black border-radius-8x pointer"
+                 id="r1c1"></div>
+            <div class="width-100x height-100x bg-blue2 margin-0 box-shadow-3-3-10-black border-radius-8x pointer"
+                 id="r1c2"></div>
+            <div class="width-100x height-100x bg-blue2 margin-0 box-shadow-3-3-10-black border-radius-8x pointer"
+                 id="r1c3"></div>
+        </div>
+        <div class="flex f-row margin-y-auto margin-x-0 justify-between">
+            <div class="width-100x height-100x bg-blue2 margin-0 box-shadow-3-3-10-black border-radius-8x pointer"
+                 id="r2c1"></div>
+            <div class="width-100x height-100x bg-blue2 margin-0 box-shadow-3-3-10-black border-radius-8x pointer"
+                 id="r2c2"></div>
+            <div class="width-100x height-100x bg-blue2 margin-0 box-shadow-3-3-10-black border-radius-8x pointer"
+                 id="r2c3"></div>
+        </div>
+        <div class="flex f-row margin-y-auto margin-x-0 justify-between">
+            <div class="width-100x height-100x bg-blue2 margin-0 box-shadow-3-3-10-black border-radius-8x pointer"
+                 id="r3c1"></div>
+            <div class="width-100x height-100x bg-blue2 margin-0 box-shadow-3-3-10-black border-radius-8x pointer"
+                 id="r3c2"></div>
+            <div class="width-100x height-100x bg-blue2 margin-0 box-shadow-3-3-10-black border-radius-8x pointer"
+                 id="r3c3"></div>
+        </div>
+    </main>
+    <footer class="flex f-row justify-between height-60x">
+        <div class="width-100x color-dark-blue fs-1r text-align-center font-w-700 font-primary flex f-column justify-center box-shadow-1-1-6-black bg-light-blue border-radius-8x">
+            <div class="flex f-row align-center justify-center o" about="chosen smaller">(YOU)</div>
+            <div class="fs-1-5r" id="o-score">0</div>
+        </div>
+        <div class="width-100x color-dark-blue fs-1r text-align-center font-w-700 font-primary flex f-column justify-center box-shadow-1-1-6-black bg-grey border-radius-8x">
+            <div>equal</div>
+            <div class="fs-1-5r" id="equal-score">0</div>
+        </div>
+        <div class="width-100x color-dark-blue fs-1r text-align-center font-w-700 font-primary flex f-column justify-center box-shadow-1-1-6-black bg-orange border-radius-8x">
+            <div class="flex f-row align-center justify-center x" about="chosen smaller">(CPU)</div>
+            <div class="fs-1-5r" id="x-score">0</div>
+        </div>
+    </footer>
+</div>
+<div class="hidden f-column width-100 height-100vh justify-center bg-dark-transparent position-absolute top-0 transition-1s" id="end-game-dialog">
+    <div class="bg-blue2 border-radius-0">
+        <div class="flex f-column justify-center width-fit font-primary margin-y-0 margin-x-auto padding-2r text-align-center font-w-700 letter-spacing-1x">
+            <div class="color-grey fs-1r" id="winner-name"></div>
+            <div class="flex f-row align-center fs-3r font-primary" about="winner" id="dialog-content">takes the
+                round
+            </div>
+            <div class="flex f-row justify-center">
+                <button class="border-none outline-none padding-8x margin-4x fs-1r box-shadow-1-1-3-black color-dark-blue border-radius-8x pointer" id="quit-button">
+                    quit
+                </button>
+                <button class="border-none outline-none  padding-8x margin-4x fs-1r box-shadow-1-1-3-black color-dark-blue border-radius-8x pointer"
+                        about="next" id="next-round-button">next round
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
